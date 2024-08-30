@@ -1,0 +1,63 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$bgPrincipal;
+    transition: background-color .5s ease;
+    scroll-behavior: smooth;
+
+    &--is-opacity {
+        background-color: rgba(variaveis.$bgPrincipal, .8);
+        transition: background-color 1s ease;
+    }
+
+
+    &__button {
+        background-color: variaveis.$corDoTextoSecundaria;
+        padding: 0 20px;
+        max-width: 250px;
+        height: 35px;
+        border: none;
+        border-radius: 3px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+        
+        &:active {
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px){
+                font-size: 15px;
+                letter-spacing: 0;
+                padding: 0 5px;
+                height: 30px;
+        }
+    }
+
+    &__container {
+        max-width: 80%;
+        height: 10vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__span{
+            color: red;
+        }
+    }
+
+    @media (max-width: 768px){
+
+        .title{
+            font-size: 15px;
+            letter-spacing: 0;        
+        }
+    }
+}

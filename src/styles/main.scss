@@ -1,0 +1,60 @@
+@use 'header';
+@use 'hero';
+@use 'variaveis';
+@use 'about';
+@use 'awards';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+    color: variaveis.$corDoTexto;
+}
+
+body {
+    background-color: variaveis.$bgPrincipal;
+}
+
+.span {
+    color: variaveis.$corSpan;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+}
+
+
+.text--big{
+    @include text(18px);
+}
+
+.text {
+    @include text;
+
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
